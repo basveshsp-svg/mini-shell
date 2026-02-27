@@ -45,7 +45,7 @@ int main() {
                                                                          arguments have ended */
      if (argv[0] == NULL) {  continue; }
      if (!(strcmp(argv[0],"exit"))) { break; }
-     if (!(strcmp(argv[0], "cd" ))) { if (argv[1]) { chdir(*(argv+1)); continue;  } else { continue;} }
+     if (!(strcmp(argv[0], "cd" ))) { if (argv[1]) { chdir(*(argv+1)); continue;  } else { chdir(getenv("HOME")); continue;} }
 
 
      fork_val = fork();
